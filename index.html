@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karunya Datta Child Care Clinic</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #fff7fb, #f5f6ff);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #8f6cf7, #a78bfa, #c4b5fd);
+      padding: 30px 20px 80px;
+      position: relative;
+      overflow: hidden;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .floating-stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      color: #ffe066;
+      font-size: 30px;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 320px;
+      color: white;
+    }
+
+    .hero-text h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 64px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #fff7b0;
+      text-shadow: 2px 2px 0px #ff9f1c;
+    }
+
+    .hero-text h2 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+.hero-text h3 {
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 600px;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #ffe066;
+      color: #5a3ec8;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #6d4aff;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+      min-width: 300px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      border: 8px solid rgba(255,255,255,0.4);
+    }
+
+    .wave {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 48px;
+      color: #7a5af8;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #777;
+      font-size: 18px;
+    }
+
+    .services {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 25px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      transition: 0.3s ease;
+      border: 2px solid #f2ecff;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .service-icon {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      color: #6f49ff;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .service-card p {
+      color: #666;
+      line-height: 1.7;
+    }
+
+    .timings {
+      background: linear-gradient(to right, #fff6d6, #fff1f7);
+      border-radius: 40px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      padding: 60px 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .timings h2 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 46px;
+      color: #7a5af8;
+      margin-bottom: 20px;
+    }
+
+    .timings p {
+      font-size: 22px;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .gallery {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .contact {
+      max-width: 1100px;
+      margin: auto;
+      background: linear-gradient(135deg, #8f6cf7, #c4b5fd);
+      border-radius: 40px;
+      padding: 60px 30px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .contact h2 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 50px;
+      margin-bottom: 25px;
+    }
+
+    .contact p {
+      font-size: 20px;
+      margin: 14px 0;
+    }
+
+    .contact a {
+      color: #fff7b0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      background: white;
+      color: #6d4aff;
+      padding: 14px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .social-btn:hover {
+      transform: scale(1.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+      font-size: 16px;
+    }
+
+    @media(max-width: 768px) {
+      .hero-text h1 {
+        font-size: 44px;
+      }
+
+      .section-title h2,
+      .timings h2,
+      .contact h2 {
+        font-size: 36px;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+
+  <div class="floating-stars">
+    <div class="star" style="top:10%;left:8%;">⭐</div>
+    <div class="star" style="top:25%;right:10%;">✨</div>
+    <div class="star" style="bottom:20%;left:15%;">🌙</div>
+    <div class="star" style="bottom:25%;right:18%;">⭐</div>
+  </div>
+
+  <div class="hero">
+
+    <div class="hero-text">
+      <h1>Karunya Datta Child Care</h1>
+
+	<h3>Dr.Monisha Ashok- MBBS M.D.,(Paediatrics).,DNB( Paediatrics).PGCAMH<h3>
+
+      <h2>Warm Pediatric Care for Every Little Smile 💜</h2>
+
+      <p>
+        A loving and child-friendly pediatric clinic focused on newborn care,
+        child wellness, vaccinations, nutrition, growth monitoring,
+        adolescent care, and complete pediatric support in a warm,
+        calm, and welcoming environment.
+      </p>
+
+      <div class="hero-buttons">
+       <a href="#contact" class="btn btn-secondary">Book Appointment</a>
+      </div>
+    </div>
+
+  <div class="hero-image">
+  <img src="https://raw.githubusercontent.com/nandhinisj01/karunya-clinic/main/teddy.png"
+       alt="Karunya Child Care">
+</div>
+
+  </div>
+
+</header>
+
+<section>
+
+  <div class="section-title">
+    <h2>Our Pediatric Services</h2>
+    <p>Gentle and caring medical support for babies, children, and adolescents</p>
+  </div>
+
+  <div class="services">
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="service-icon">👶</div>
+        <h3>Newborn Care</h3>
+        <p>Complete newborn checkups, feeding guidance, and early growth monitoring.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🍼</div>
+        <h3>Lactation Counselling</h3>
+        <p>Professional breastfeeding support and maternal guidance for healthy bonding.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💉</div>
+        <h3>Immunization</h3>
+        <p>Safe vaccination schedules and pediatric immunization care for children.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📈</div>
+        <h3>Growth Monitoring</h3>
+        <p>Tracking healthy physical and emotional development milestones.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🥗</div>
+        <h3>Nutrition Advice</h3>
+        <p>Healthy diet planning and nutritional support for growing children.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌈</div>
+        <h3>Development Screening</h3>
+        <p>Early identification and support for developmental concerns and milestones.</p>
+      </div>
+
+		<div class="service-card">
+        <div class="service-icon">📹</div>
+        <h3>Webinar Sessions</h3>
+        <p>Live and on-demand webinars</p>
+      </div>
+
+		<div class="service-card">
+        <div class="service-icon">💻🩺</div>
+        <h3>Online Consultations Available </h3>
+        <p>Provide immediate, secure, and accessible care for children, often through video or text</p>
+      </div>
+
+  
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="timings">
+    <h2>Clinic Timings ⏰</h2>
+    <p><strong>Monday – Saturday</strong></p>
+    <p>4:30 PM – 8:00 PM</p>
+    <p>Warm and compassionate pediatric consultations every evening 💜</p>
+  </div>
+
+</section>
+
+<section>
+
+  <div class="section-title">
+    <h2>Happy & Healthy Little Smiles</h2>
+    <p>A warm and child-friendly clinic environment designed with care</p>
+  </div>
+
+  <div class="gallery">
+
+    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1200&auto=format&fit=crop" alt="Baby Care">
+
+    <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=1200&auto=format&fit=crop" alt="Happy Child">
+
+    <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=1200&auto=format&fit=crop" alt="Mother and Baby">
+	  
+  </div>
+
+</section>
+
+<section>
+
+  <div class="contact" id="contact">
+
+    <h2>Contact Our Clinic 💜</h2>
+
+    <p>📍 Karunya Datta Child Care Clinic</p>
+    <p>📞 +91-8072719704</p>
+    <p>📧 drmonisha.childexpert@gmail.com</p>
+    <p> No 34, bajanai koil main Street , choolaimedu chennai 600094 </p>
+    <p>
+      🌐 Website:
+      <a href="https://nandhinisj01.github.io/karunya-clinic/" target="_blank">
+        www.karunyadattachildcare.com
+      </a>
+    </p>
+<p>
+    📸 Instagram:
+    <a href="https://instagram.com/karunya.datta.child.care" target="_blank">
+      @karunyadattachildcare
+    </a>
+  </p>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Karunya Datta Child Care Clinic • Designed with warmth and care for children 💜
+</footer>
+
+</body>
+</html>
